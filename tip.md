@@ -1,3 +1,24 @@
+##Objective-C
+
+1.在Objective-C中向nil发送消息是完全有效的——只是在运行时不会有任何作用。Cocoa中的几种模式就利用到了这一点。发向nil的消息的返回值也可以是有效的:
+
+ * 如果一个方法返回值是一个对象，那么发送给nil的消息将返回0(nil)。例如：Person * motherInlaw = [ aPerson spouse] mother]; 如果spouse对象为nil，那么发送给nil的消息mother也将返回nil。
+
+ * 如果方法返回值为指针类型，float，double，long double 或者long long的整型标量，发送给nil的消息将返回0。
+
+ * 如果方法返回值为结构体，正如在《Mac OS X ABI 函数调用指南》，发送给nil的消息将返回0。结构体中各个字段的值将都是0。
+
+ * 如果方法的返回值不是上述提到的几种情况，那么发送给nil的消息的返回值将是未定义的。
+
+
+2.扩展(Extension)是一种匿名分类(Category)；但是和分类不一样的是，扩展可以添加新的实例变量。
+```objectivec
+@interface MyClass () { //注意此处：扩展  
+    float value;  
+}  
+- (void)setValue:(float)newValue;  
+@end
+```
 
 ##UITableView
 
@@ -16,9 +37,7 @@
 UIView *contentView = [[UIView alloc]
     initWithFrame:CGRectMake(0,0,contentWidth,contentHeight)];
 [scrollView addSubview:contentView];
-// DON'T change contentView's translatesAutoresizingMaskIntoConstraints,
-// which defaults to YES;
-Set the content size of the scroll view to match the size of the content view:
+// Set the content size of the scroll view to match the size of the content view:
  [scrollView setContentSize:CGMakeSize(contentWidth,contentHeight)];
 ```
 
