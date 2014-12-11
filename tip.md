@@ -40,6 +40,8 @@ UIView *contentView = [[UIView alloc]
 // Set the content size of the scroll view to match the size of the content view:
  [scrollView setContentSize:CGMakeSize(contentWidth,contentHeight)];
 ```
+##UIView
+貌似通过segue、navigation导航出现的视图，在回退时会被回收，下次重新执行viewdidload。在UITabBarViewController里的视图不会被回收，下次显示时不执行viewdidload。
 
 ##Container
 1.NSSet、NSDictionary默认调用isEqual进行比较。
@@ -61,6 +63,8 @@ for (NSDictionary *jidDic in jidArr) {
     NSString *jid = [jidDic allValues][0];
 }
 ```
+
+2.修改model后需删除旧存储重新生成，否则读取时会崩溃。
 
 ##XMPPFramework xcode编译出错处理
 1.OTHER_LDFLAGS 添加 -lxml2 -lresolv
