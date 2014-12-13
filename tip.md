@@ -20,12 +20,8 @@
 @end
 ```
 
-##UITableView
-
-1.滑动删除时按钮不出现时要修改tableview的constraint，删除tableviewcell前先删除数据源。
-
-2.滑动删除view回退崩溃时可以只实现commitEditingStyle委托方法来解决。
-
+##UIView
+貌似通过segue、navigation导航出现的视图，在回退时会被回收，下次重新执行viewdidload。在UITabBarViewController里的视图不会被回收，下次显示时不执行viewdidload。
 
 ##UILable
 1.lable lines 不为0时无法换行，在storyboard中设置时尤其需要注意。
@@ -40,12 +36,23 @@ UIView *contentView = [[UIView alloc]
 // Set the content size of the scroll view to match the size of the content view:
  [scrollView setContentSize:CGMakeSize(contentWidth,contentHeight)];
 ```
-##UIView
-貌似通过segue、navigation导航出现的视图，在回退时会被回收，下次重新执行viewdidload。在UITabBarViewController里的视图不会被回收，下次显示时不执行viewdidload。
+
+##UITableView
+
+1.滑动删除时按钮不出现时要修改tableview的constraint，删除tableviewcell前先删除数据源。
+
+2.滑动删除view回退崩溃时可以只实现commitEditingStyle委托方法来解决。
+
+##UISearchDisplayController
+1.tableview的上下constraint会造成UISearchDisplayController全屏后不正确的遮盖tableview，使用UISearchDisplayController时不要对tableview设置上下constraint。可以设置height constraint。
+
+2.tableview的左右constraint会造成UISearchDisplayController全屏后取消按钮的位置不正确，使用UISearchDisplayController时不要对tableview设置左右constraint。可以设置width constraint。
+
+##UINavigationItem
+1.在storyboard中往navigationitem里面添加的按钮会使标题位置偏移（不居中），在代码中添加不会导致此效果。
 
 ##Container
 1.NSSet、NSDictionary默认调用isEqual进行比较。
-
 
 ##CoreData
 1.NSFetchRequest分组去重查询时返回类型为dictionary，处理方式如下：
