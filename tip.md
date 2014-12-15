@@ -26,6 +26,9 @@
 ##UILable
 1.lable lines 不为0时无法换行，在storyboard中设置时尤其需要注意。
 
+##UIButton
+1.设置UIButton图片时需要将Type改为Custom，在storyboard中设置时尤其需要注意。设置时需要同时设置UIControlStateNormal和UIControlStateHighlighted两种状态，否则点击时图片有可能旋转一下。
+
 ##UIScrollView
 1.使用Auto Layout时需嵌套一个UIView，在UIView里面进行布局。
 
@@ -42,6 +45,8 @@ UIView *contentView = [[UIView alloc]
 1.滑动删除时按钮不出现时要修改tableview的constraint，删除tableviewcell前先删除数据源。
 
 2.滑动删除view回退崩溃时可以只实现commitEditingStyle委托方法来解决。
+
+3.tableview content为static cells方式时才可以直接连接cell内的控件到TabViewController的outlet。
 
 ##UISearchDisplayController
 1.tableview的上下constraint会造成UISearchDisplayController全屏后不正确的遮盖tableview，使用UISearchDisplayController时不要对tableview设置上下constraint。可以设置height constraint。
