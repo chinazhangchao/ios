@@ -20,6 +20,12 @@
 @end
 ```
 
+##Container
+1.NSSet、NSDictionary默认调用isEqual进行比较。
+
+##NSURL
+1.本地文件路径使用fileURLWithPath。
+
 ##UIView
 貌似通过segue、navigation导航出现的视图，在回退时会被回收，下次重新执行viewdidload。在UITabBarViewController里的视图不会被回收，下次显示时不执行viewdidload。
 
@@ -55,9 +61,6 @@ UIView *contentView = [[UIView alloc]
 
 ##UINavigationItem
 1.在storyboard中往navigationitem里面添加的按钮会使标题位置偏移（不居中），在代码中添加不会导致此效果。
-
-##Container
-1.NSSet、NSDictionary默认调用isEqual进行比较。
 
 ##CoreData
 1.NSFetchRequest分组去重查询时返回类型为dictionary，处理方式如下：
