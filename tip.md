@@ -62,6 +62,9 @@ UIView *contentView = [[UIView alloc]
 ##UINavigationItem
 1.在storyboard中往navigationitem里面添加的按钮会使标题位置偏移（不居中），在代码中添加不会导致此效果。
 
+##UIWebView
+1.设置webview与屏幕相同大小以便网页内容自动适应。
+
 ##CoreData
 1.NSFetchRequest分组去重查询时返回类型为dictionary，处理方式如下：
 
