@@ -54,6 +54,8 @@ UIView *contentView = [[UIView alloc]
 
 3.tableview content为static cells方式时才可以直接连接cell内的控件到TabViewController的outlet。
 
+4.静态cell只可以出现在storyboard中，不可以在xib中。
+
 ##UISearchDisplayController
 1.tableview的上下constraint会造成UISearchDisplayController全屏后不正确的遮盖tableview，使用UISearchDisplayController时不要对tableview设置上下constraint。可以设置height constraint。
 
