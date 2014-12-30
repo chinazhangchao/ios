@@ -26,8 +26,11 @@
 ##NSURL
 1.本地文件路径使用fileURLWithPath。
 
+##Storyboard
+1.xib与storyboadr相比，存在诸多限制，尽量使用storyboard。
+
 ##UIView
-貌似通过segue、navigation导航出现的视图，在回退时会被回收，下次重新执行viewdidload。在UITabBarViewController里的视图不会被回收，下次显示时不执行viewdidload。
+1.貌似通过segue、navigation导航出现的视图，在回退时会被回收，下次重新执行viewdidload。在UITabBarViewController里的视图不会被回收，下次显示时不执行viewdidload。
 
 ##UILable
 1.lable lines 不为0时无法换行，在storyboard中设置时尤其需要注意。
