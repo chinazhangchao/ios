@@ -70,6 +70,9 @@ UIView *contentView = [[UIView alloc]
 ##UIWebView
 1.设置webview与屏幕相同大小以便网页内容自动适应。
 
+##UITabBarController
+1.UITabBarItem的图片设置应该在视图加载前就调用，在appDelegate didFinishLaunchingWithOptions方法中设置。否则不起作用。
+
 ##CoreData
 1.NSFetchRequest分组去重查询时返回类型为dictionary，处理方式如下：
 
