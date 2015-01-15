@@ -38,6 +38,8 @@
 ##UIButton
 1.设置UIButton图片时需要将Type改为Custom，在storyboard中设置时尤其需要注意。设置时需要同时设置UIControlStateNormal和UIControlStateHighlighted两种状态，否则点击时图片有可能旋转一下。
 
+2.通过在button重叠位置放置imageview和label控件实现button同时设置图片和文字。
+
 ##UIScrollView
 1.使用Auto Layout时需嵌套一个UIView，在UIView里面进行布局。
 
