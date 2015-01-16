@@ -59,7 +59,7 @@ UIView *contentView = [[UIView alloc]
 
 3.tableview content为static cells方式时才可以直接连接cell内的控件到TabViewController的outlet。
 
-4.静态cell只可以出现在storyboard中，不可以在xib中。
+4.静态cell只可以出现在storyboard中，不可以在xib中，只可以在UITableViewController，不可以在UIViewController。
 
 5.contentInset在backgroundView或tableHeaderView之后设置会导致刚显示时无效（奇葩！）。
 
