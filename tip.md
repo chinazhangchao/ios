@@ -40,6 +40,10 @@
 
 2.通过在button重叠位置放置imageview和label控件实现button同时设置图片和文字。
 
+##UITextField
+1.UITextField border style改为非RoundedRect后（在storyboard或xib修改即可）可以修改高度。
+2.修改边框颜色时需同时设置边框宽度，否则不起作用。tf.layer.borderColor、tf.layer.borderWidth。
+
 ##UIScrollView
 1.使用Auto Layout时需嵌套一个UIView，在UIView里面进行布局。
 
