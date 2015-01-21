@@ -53,14 +53,14 @@
                                                    constant: num]];
                                                    
 UIView *seperator = [UIView new];
-    [seperator setTranslatesAutoresizingMaskIntoConstraints: NO];
-    seperator.backgroundColor = [ViewHelper tableViewSeperatorColor];
-    [self addSubview: seperator];
-    
-    ADD_CONSTRAINT(NSLayoutAttributeLeading, 15.0)
-    ADD_CONSTRAINT(NSLayoutAttributeTrailing, 8.0)
-    ADD_CONSTRAINT(NSLayoutAttributeBottom, 0.0)
-    ADD_SINGLE_CONSTRAINT(NSLayoutAttributeHeight, 0.8)
+[seperator setTranslatesAutoresizingMaskIntoConstraints: NO];
+seperator.backgroundColor = [ViewHelper tableViewSeperatorColor];
+[self addSubview: seperator];
+
+ADD_CONSTRAINT(NSLayoutAttributeLeading, 15.0)
+ADD_CONSTRAINT(NSLayoutAttributeTrailing, 8.0)
+ADD_CONSTRAINT(NSLayoutAttributeBottom, 0.0)
+ADD_SINGLE_CONSTRAINT(NSLayoutAttributeHeight, 0.8)
 ```
 
 ##UIView
