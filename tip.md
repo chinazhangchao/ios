@@ -12,6 +12,7 @@
 
 
 2.扩展(Extension)是一种匿名分类(Category)；但是和分类不一样的是，扩展可以添加新的实例变量。
+
 ```objectivec
 @interface MyClass () { //注意此处：扩展  
     float value;  
@@ -28,6 +29,39 @@
 
 ##Storyboard
 1.xib与storyboadr相比，存在诸多限制，尽量使用storyboard。
+
+##NSLayoutConstraint
+1.代码添加constraint时要设置setTranslatesAutoresizingMaskIntoConstraints: NO。
+
+```objectivec
+#define ADD_CONSTRAINT(attr, num) \
+[self addConstraint: [NSLayoutConstraint constraintWithItem: seperator \
+                                                  attribute: attr \
+                                                  relatedBy: NSLayoutRelationEqual \
+                                                     toItem: self \
+                                                  attribute: attr \
+                                                 multiplier: 1 \
+                                                   constant: num]];
+
+#define ADD_SINGLE_CONSTRAINT(attr, num) \
+[seperator addConstraint: [NSLayoutConstraint constraintWithItem: seperator \
+                                                  attribute: attr \
+                                                  relatedBy: NSLayoutRelationEqual \
+                                                     toItem: nil \
+                                                  attribute: NSLayoutAttributeNotAnAttribute \
+                                                 multiplier: 1 \
+                                                   constant: num]];
+                                                   
+UIView *seperator = [UIView new];
+    [seperator setTranslatesAutoresizingMaskIntoConstraints: NO];
+    seperator.backgroundColor = [ViewHelper tableViewSeperatorColor];
+    [self addSubview: seperator];
+    
+    ADD_CONSTRAINT(NSLayoutAttributeLeading, 15.0)
+    ADD_CONSTRAINT(NSLayoutAttributeTrailing, 8.0)
+    ADD_CONSTRAINT(NSLayoutAttributeBottom, 0.0)
+    ADD_SINGLE_CONSTRAINT(NSLayoutAttributeHeight, 0.8)
+```
 
 ##UIView
 1.貌似通过segue、navigation导航出现的视图，在回退时会被回收，下次重新执行viewdidload。在UITabBarViewController里的视图不会被回收，下次显示时不执行viewdidload。
