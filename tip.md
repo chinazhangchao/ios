@@ -101,6 +101,12 @@ UIView *contentView = [[UIView alloc]
 
 5.contentInset在backgroundView或tableHeaderView之后设置会导致刚显示时无效（奇葩！）。
 
+##UINavigationController
+1.navigationbar默认有透明效果，需手动关闭透明。
+```objectivec
+self.navigationController.navigationBar.translucent = NO;
+```
+
 ##UISearchDisplayController
 1.tableview的上下constraint会造成UISearchDisplayController全屏后不正确的遮盖tableview，使用UISearchDisplayController时不要对tableview设置上下constraint。可以设置height constraint。
 
