@@ -93,7 +93,7 @@ UIView *contentView = [[UIView alloc]
 
 1.滑动删除时按钮不出现时要修改tableview的constraint，删除tableviewcell前先删除数据源。
 
-2.滑动删除view回退崩溃时可以只实现commitEditingStyle委托方法来解决。
+2.滑动删除view回退崩溃时可以只实现commitEditingStyle委托方法来解决。删section必须用deleteSections。 删row必须用deleteRowsAtIndexPaths。
 
 3.tableview content为static cells方式时才可以直接连接cell内的控件到TabViewController的outlet。
 
