@@ -20,6 +20,8 @@
 - (void)setValue:(float)newValue;  
 @end
 ```
+##ImageSize
+1.launch image:320x480、640x960、640x1136、750x1334、1242x2208
 
 ##Container
 1.NSSet、NSDictionary默认调用isEqual进行比较。
