@@ -1,6 +1,8 @@
 ##Apple Developer Program telephone support
 https://developer.apple.com/contact/phone.php
 
+##出现莫名其妙的问题时试试清理重编，傻X的Xcode识别改动文件的能力太差
+
 ##Objective-C
 
 1.在Objective-C中向nil发送消息是完全有效的——只是在运行时不会有任何作用。Cocoa中的几种模式就利用到了这一点。发向nil的消息的返回值也可以是有效的:
