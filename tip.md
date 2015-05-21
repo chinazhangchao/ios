@@ -112,6 +112,10 @@ UIView *contentView = [[UIView alloc]
 ```objectivec
 tableView.autoresizingMask= UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
 ```
+##UICollectionView
+1.只有StoryBoard里面的UICollectionView有UICollectionViewCell。如果使用XIB，需要创建一个包含CollectionViewCell的xib文件，然后使用registerNib。
+
+Only UICollectionView inside StoryBoard have UICollectionViewCell inside. If use XIB, create a new XIB with CellName.xib, add CollectionViewCell to it, specify name of UICollectionView custom class. After that use registerNib.
 
 ##UINavigationController
 1.navigationbar默认有透明效果，需手动关闭透明。
