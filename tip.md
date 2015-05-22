@@ -17,7 +17,6 @@ https://developer.apple.com/contact/phone.php
 
 
 2.扩展(Extension)是一种匿名分类(Category)；但是和分类不一样的是，扩展可以添加新的实例变量。
-
 ```objectivec
 @interface MyClass () { //注意此处：扩展  
     float value;  
@@ -25,6 +24,13 @@ https://developer.apple.com/contact/phone.php
 - (void)setValue:(float)newValue;  
 @end
 ```
+
+3.Category新添加的方法如果和已经存在的方法具有相同的prototype，那么新添加的方法将会覆盖已经存在的方法。<font color="red">在使用多个第三库时尤其要注意AppDelegate的回调被覆盖。</font>
+
+不建议在 category 中覆盖类中的方法，因为在 category 中的方法不能调用 superClass 的方法（因为没有元数据支持）。
+
+category 方法不能覆盖于同一class 的其它 category 中的方法。因为不法预知他们的加载优先顺序，就可能在编译时出错。
+
 ##ImageSize
 1.launch image:320x480、640x960、640x1136、750x1334、1242x2208
 
