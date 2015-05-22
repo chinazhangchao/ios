@@ -78,6 +78,15 @@ ADD_SINGLE_CONSTRAINT(NSLayoutAttributeHeight, 0.8)
 ##UILable
 1.lable lines 不为0时无法换行，在storyboard中设置时尤其需要注意。
 
+##UIImageView
+1.添加点击手势时，将userInteractionEnabled属性设置为YES。
+
+```objectivec
+self.portraitImageView.userInteractionEnabled = YES;
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapPortrait)];
+    [self.portraitImageView addGestureRecognizer:tap];
+```
+
 ##UIButton
 1.设置UIButton图片时需要将Type改为Custom，在storyboard中设置时尤其需要注意。设置时需要同时设置UIControlStateNormal和UIControlStateHighlighted两种状态，否则点击时图片有可能旋转一下。
 
