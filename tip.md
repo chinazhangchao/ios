@@ -92,6 +92,12 @@ self.portraitImageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapPortrait)];
     [self.portraitImageView addGestureRecognizer:tap];
 ```
+2.设置圆角
+
+```objectivec
+self.pictureImageView.layer.masksToBounds = YES;
+self.pictureImageView.layer.cornerRadius = 2.0;
+```
 
 ##UIButton
 1.设置UIButton图片时需要将Type改为Custom，在storyboard中设置时尤其需要注意。设置时需要同时设置UIControlStateNormal和UIControlStateHighlighted两种状态，否则点击时图片有可能旋转一下。
