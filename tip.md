@@ -31,6 +31,16 @@ https://developer.apple.com/contact/phone.php
 
 category 方法不能覆盖于同一class 的其它 category 中的方法。因为不法预知他们的加载优先顺序，就可能在编译时出错。
 
+4.代码块的使用
+
+```objectivec
+typedef void (^CCLoginBoardBlock)();
+@property (nonatomic, copy) CCLoginBoardBlock loginSucceed;
+if (self.loginSucceed != nil) {
+                    self.loginSucceed();
+                }
+```
+
 ##ImageSize
 1.launch image:320x480、640x960、640x1136、750x1334、1242x2208
 
@@ -47,16 +57,16 @@ category 方法不能覆盖于同一class 的其它 category 中的方法。因�
 1.代码添加constraint时要设置setTranslatesAutoresizingMaskIntoConstraints: NO。
 
 ```objectivec
-#define ADD_CONSTRAINT(attr, num) \
+\#define ADD_CONSTRAINT(attr, num) \
 [self addConstraint: [NSLayoutConstraint constraintWithItem: seperator \
-                                                  attribute: attr \
+                                                  attribute: attr \                                                  
                                                   relatedBy: NSLayoutRelationEqual \
                                                      toItem: self \
                                                   attribute: attr \
                                                  multiplier: 1 \
                                                    constant: num]];
 
-#define ADD_SINGLE_CONSTRAINT(attr, num) \
+\#define ADD_SINGLE_CONSTRAINT(attr, num) \
 [seperator addConstraint: [NSLayoutConstraint constraintWithItem: seperator \
                                                   attribute: attr \
                                                   relatedBy: NSLayoutRelationEqual \
@@ -81,6 +91,16 @@ ADD_SINGLE_CONSTRAINT(NSLayoutAttributeHeight, 0.8)
 ##UIView
 1.貌似通过segue、navigation导航出现的视图，在回退时会被回收，下次重新执行viewdidload。在UITabBarViewController里的视图不会被回收，下次显示时不执行viewdidload。
 
+2.创建高度为0.5(头发丝)的view。
+
+```objectivec
++ (void)changeToHairLine:(UIView*)v
+{
+    v.layer.borderColor = [v.backgroundColor CGColor];
+    v.layer.borderWidth = (1.0 / [UIScreen mainScreen].scale) / 2;
+    v.backgroundColor = [UIColor clearColor];
+}
+```
 ##UILable
 1.lable lines 不为0时无法换行，在storyboard中设置时尤其需要注意。
 
@@ -89,8 +109,8 @@ ADD_SINGLE_CONSTRAINT(NSLayoutAttributeHeight, 0.8)
 
 ```objectivec
 self.portraitImageView.userInteractionEnabled = YES;
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapPortrait)];
-    [self.portraitImageView addGestureRecognizer:tap];
+UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapPortrait)];
+[self.portraitImageView addGestureRecognizer:tap];
 ```
 2.设置圆角
 
