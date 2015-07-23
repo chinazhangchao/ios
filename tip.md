@@ -17,10 +17,11 @@ https://developer.apple.com/contact/phone.php
 
 
 2.扩展(Extension)是一种匿名分类(Category)；但是和分类不一样的是，扩展可以添加新的实例变量。
+
 ```objectivec
 @interface MyClass () { //注意此处：扩展  
     float value;  
-}  
+}
 - (void)setValue:(float)newValue;  
 @end
 ```
@@ -38,7 +39,7 @@ typedef void (^CCLoginBoardBlock)();
 @property (nonatomic, copy) CCLoginBoardBlock loginSucceed;
 if (self.loginSucceed != nil) {
                     self.loginSucceed();
-                }
+}
 ```
 
 ##ImageSize
@@ -152,6 +153,7 @@ UIView *contentView = [[UIView alloc]
 5.contentInset在backgroundView或tableHeaderView之后设置会导致刚显示时无效（奇葩！）。
 
 6.解决UITableView的无法正常显示最后一行的问题：
+
 ```objectivec
 tableView.autoresizingMask= UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
 ```
@@ -162,6 +164,7 @@ Only UICollectionView inside StoryBoard have UICollectionViewCell inside. If use
 
 ##UINavigationController
 1.navigationbar默认有透明效果，需手动关闭透明。
+
 ```objectivec
 self.navigationController.navigationBar.translucent = NO;
 ```
