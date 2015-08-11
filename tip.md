@@ -89,6 +89,13 @@ ADD_SINGLE_CONSTRAINT(NSLayoutAttributeHeight, 0.8)
 
 2.6plus下约束表现不一样时注意关掉约束里面的Relative to margin选项。
 
+##UIGestureRecognizer
+1.多种手势并存时通过requireGestureRecognizerToFail指定优先级，参数里面的手势优先。
+
+```objectivec
+[longPress requireGestureRecognizerToFail:tap];
+```
+
 ##UIView
 1.貌似通过segue、navigation导航出现的视图，在回退时会被回收，下次重新执行viewdidload。在UITabBarViewController里的视图不会被回收，下次显示时不执行viewdidload。
 
