@@ -3,6 +3,30 @@ https://developer.apple.com/contact/phone.php
 
 ##出现莫名其妙的问题时试试清理重编，傻X的Xcode识别改动文件的能力太差
 
+##Pods
+
+pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+pod 'FLEX', '~> 2.0', :configurations => ['Debug']
+
+pod 'LKDBHelper', :head
+pod 'MJExtension'
+pod 'PAPreferences'
+
+pod 'Masonry'
+pod 'CYLTabBarController'
+pod 'RadioButton'
+pod 'DropdownMenu'
+platform :ios, '8.0'
+pod 'CTAssetsPickerController',  '~> 3.3.0'
+pod "MWPhotoBrowser"
+
+pod 'AFNetworking', '~> 3.0'
+
+pod 'InAppSettingsKit'
+
+pod 'FMDB/SQLCipher',:head
+pod 'LKDBHelper',:head
+
 ##Objective-C
 
 1.在Objective-C中向nil发送消息是完全有效的——只是在运行时不会有任何作用。Cocoa中的几种模式就利用到了这一点。发向nil的消息的返回值也可以是有效的:
@@ -93,7 +117,7 @@ ADD_SINGLE_CONSTRAINT(NSLayoutAttributeHeight, 0.8)
 1.多种手势并存时通过requireGestureRecognizerToFail指定优先级，参数里面的手势优先。
 
 ```objectivec
-[longPress requireGestureRecognizerToFail:tap];
+[tap requireGestureRecognizerToFail:longPress];
 ```
 
 ##UIView
@@ -213,3 +237,6 @@ for (NSDictionary *jidDic in jidArr) {
 1.OTHER_LDFLAGS 添加 -lxml2 -lresolv
 
 2.HEADER_SEARCH_PATHS 添加 /usr/include/libxml2/
+
+#import libxml/tree.h file not found
+set HeaderSearchPath and LibrarySearchPaths to /usr/include/libxml2
