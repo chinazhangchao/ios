@@ -6,25 +6,47 @@ https://developer.apple.com/contact/phone.php
 ##Pods
 
 pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+
 pod 'FLEX', '~> 2.0', :configurations => ['Debug']
 
+<br/>
 pod 'LKDBHelper', :head
+
 pod 'MJExtension'
+
 pod 'PAPreferences'
 
+<br/>
 pod 'Masonry'
+
 pod 'CYLTabBarController'
+
 pod 'RadioButton'
+
 pod 'DropdownMenu'
+
 platform :ios, '8.0'
+
 pod 'CTAssetsPickerController',  '~> 3.3.0'
+
 pod "MWPhotoBrowser"
 
-pod 'AFNetworking', '~> 3.0'
+pod 'ALCameraViewController'
+
+pod 'RSKImageCropper'
+
+pod "DZNPhotoPickerController"
+
+pod 'DZNPhotoPickerController/Editor'
 
 pod 'InAppSettingsKit'
 
+<br/>
+pod 'AFNetworking', '~> 3.0'
+
+<br/>
 pod 'FMDB/SQLCipher',:head
+
 pod 'LKDBHelper',:head
 
 ##Objective-C
