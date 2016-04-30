@@ -10,6 +10,11 @@ pod 'Reveal-iOS-SDK', :configurations => ['Debug']
 pod 'FLEX', '~> 2.0', :configurations => ['Debug']
 
 <br/>
+pod 'CocoaLumberjack'
+
+<br/>
+pod 'FMDB/SQLCipher', :head
+
 pod 'LKDBHelper', :head
 
 pod 'MJExtension'
@@ -41,13 +46,10 @@ pod 'DZNPhotoPickerController/Editor'
 
 pod 'InAppSettingsKit'
 
+pod 'MBProgressHUD'
+
 <br/>
 pod 'AFNetworking', '~> 3.0'
-
-<br/>
-pod 'FMDB/SQLCipher',:head
-
-pod 'LKDBHelper',:head
 
 ##Objective-C
 
