@@ -3,6 +3,15 @@ https://developer.apple.com/contact/phone.php
 
 ##出现莫名其妙的问题时试试清理重编，傻X的Xcode识别改动文件的能力太差
 
+##AppIcon Size
+
+29x29、40x40、58x58、76x76、80x80、87x87、120x120、152x152、167x167、180x180。
+
+##LaunchImage Size
+
+320 x 480、640 x 960、640 x 1136、750 x 1334、768 x 1024、1242 x 2208、1536 x 2048。
+
+
 ##Pods
 
 pod 'Reveal-iOS-SDK', :configurations => ['Debug']
@@ -11,6 +20,8 @@ pod 'FLEX', '~> 2.0', :configurations => ['Debug']
 
 <br/>
 pod 'CocoaLumberjack'
+pod 'AFNetworking', '~> 3.0'
+pod 'Harpy'
 
 <br/>
 pod 'FMDB/SQLCipher', :head
@@ -48,8 +59,6 @@ pod 'InAppSettingsKit'
 
 pod 'MBProgressHUD'
 
-<br/>
-pod 'AFNetworking', '~> 3.0'
 
 ##Objective-C
 
