@@ -11,6 +11,29 @@ https://developer.apple.com/contact/phone.php
 
 320 x 480、640 x 960、640 x 1136、750 x 1334、768 x 1024、1242 x 2208、1536 x 2048。
 
+Default.png: 320 x 480
+
+Default@2x.png: 640 x 960
+
+Default-568h@2x.png: 640 x 1136
+
+Default-667h@2x.png: 750 x 1334 (iPhone 6, Portrait)
+
+Default-736h@3x.png: 1242 x 2208 (iPhone 6 Plus, Portrait)
+
+Default-Landscape-568h@2x.png: 1136 x 640
+
+Default-Landscape-667h@2x.png: 1334 x 750 (iPhone 6, Landscape)
+
+Default-Landscape-736h@3x.png: 2208 x 1242 (iPhone 6 Plus, Landscape)
+
+Default-Portrait.png: 768 x 1024
+
+Default-Portrait@2x.png: 1536 x 2048
+
+Default-Landscape.png: 1024 x 768
+
+Default-Landscape@2x.png: 2048 x 1536
 
 ##Pods
 
